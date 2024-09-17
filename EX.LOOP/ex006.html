@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>06 - Solicite um número ao usuário e exiba a tabuada desse número de 1 a 10.</h1>
+<body>
+    <h1>Tabuada</h1>
+    <input type="text" name="txtn1" id="txtn1">
+<br>
+
+<input type="button" value="entrar" onclick="Calcular()">
+
+    <div id="res"></div>
+
+    <script>
+        function Calcular(){
+            let nume = window.document.getElementById (`txtn1`).value;
+
+            do{
+                window.document.write(nume);
+                nume++
+            }
+
+        while ( nume <= 10){
+           nume++;
+        }
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
