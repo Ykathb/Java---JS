@@ -8,30 +8,46 @@
 <h1>06 - Solicite um número ao usuário e exiba a tabuada desse número de 1 a 10.</h1>
 <body>
     <h1>Tabuada</h1>
-    <input type="text" name="txtn1" id="txtn1">
-<br>
+    <section>
+        <div>
+    <p>Numero <input type="number" name="num" id="txtn">
+    <input type="button" value="Gerar Tabuada" onclick="Tabuada()"></p>
+        </div>
+            <div>
 
-<input type="button" value="entrar" onclick="Calcular()">
+        <select name="tabuada" id="seltab" size="10">
+        
+        </select>
 
-    <div id="res"></div>
+            </div>
+    </section>
+
 
     <script>
-        function Calcular(){
-            let nume = window.document.getElementById (`txtn1`).value;
+        function Tabuada(){
+            let num = document.getElementById(`txtn`);
+            let tab = document.getElementById(`seltab`);
 
-            do{
-                window.document.write(nume);
-                nume++
+            if (num.value.length == 0){
+                window.alert(`Por favor digite um numero`);
+            }
+            else{
+                let n = Number(num.value);
+                let c =1;
+                tab.innerHTML = `,`; 
+                while ( c <= 10){
+                    let item = document.createElement(`option`);
+                    item.text = `${n} X ${c} = ${n * c}`;
+                    tab.appendChild(item)
+                    c++
+                }
             }
 
-        while ( nume <= 10){
-           nume++;
-        }
 
 
         }
 
-
+    
 
     </script>
 
